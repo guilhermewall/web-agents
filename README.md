@@ -1,69 +1,73 @@
-# React + TypeScript + Vite
+## 🚀 Tecnologias
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-**React 19.1** - Biblioteca para interfaces de usuário
 
-Currently, two official plugins are available:
+-**TypeScript 5.8** - Superset JavaScript com tipagem estática
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-**Vite 7.0** - Build tool e servidor de desenvolvimento
 
-## Expanding the ESLint configuration
+-**TailwindCSS 4.1** - Framework CSS utility-first
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-**React Router Dom 7.6** - Biblioteca de roteamento
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-**TanStack React Query 5.8** - Gerenciamento de estado servidor e cache
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+-**Radix UI** - Componentes primitivos acessíveis
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-**Shadcn/ui** - Sistema de componentes
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-**Lucide React** - Biblioteca de ícones
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Padrões de Projeto
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-**Component-based Architecture** - Arquitetura baseada em componentes React
+
+-**File-based Routing** - Roteamento baseado em arquivos com React Router
+
+-**Server State Management** - Gerenciamento de estado servidor com React Query
+
+-**Variant-based Components** - Componentes com variantes usando CVA
+
+-**Composition Pattern** - Padrão de composição com Radix Slot
+
+-**Path Aliasing** - Alias de caminhos (`@/` aponta para `src/`)
+
+## ⚙️ Configuração do Projeto
+
+### Pré-requisitos
+
+- Node.js (versão 18 ou superior)
+- npm ou yarn
+
+### Instalação
+
+1. Clone o repositório
+2. Instale as dependências:
+
+   ```bash
+
+   npm install
+
+   ```
+
+3. Execute o servidor de desenvolvimento:
+
+   ```bash
+
+   npm run dev
+
+   ```
+
+4. Acesse a aplicação em `http://localhost:5173`
+
+### Scripts Disponíveis
+
+-`npm run dev` - Inicia o servidor de desenvolvimento
+
+-`npm run build` - Gera build de produção
+
+-`npm run preview` - Preview do build de produção
+
+### Backend
+
+O projeto consome uma API que deve estar rodando na porta 3333. Certifique-se de que o backend esteja configurado e executando antes de iniciar o frontend.
