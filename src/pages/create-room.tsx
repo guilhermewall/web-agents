@@ -14,7 +14,7 @@ export function CreateRoom() {
         <ul>
           {data?.map((room) => (
             <li key={room.id}>
-              <Link to={`/room/${room.id}`}>{room.name}</Link>
+              <Link to={`/room/${room.id}`}>{room.name}</Link>{" "}
             </li>
           ))}
         </ul>
